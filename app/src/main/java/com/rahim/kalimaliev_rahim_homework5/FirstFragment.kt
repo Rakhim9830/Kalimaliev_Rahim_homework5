@@ -49,8 +49,7 @@ private var list =  arrayListOf<CharacterModel>()
     }
 
    private  fun onClick(position: Int){
-        binding.apply {
-
+       
             findNavController().navigate(R.id.secondFragment, bundleOf(
                 USER to R.id.character_name, STATUS to R.id.tx_status,
 
@@ -59,7 +58,7 @@ private var list =  arrayListOf<CharacterModel>()
 
         }
     }
-}
+
 
 
 

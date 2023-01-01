@@ -25,9 +25,9 @@ private lateinit var  binding: FragmentSecondBinding
       val name = arguments?.getString(FirstFragment.USER)
       val status = arguments?.getString(FirstFragment.STATUS)
       val image = arguments?.getInt(FirstFragment.IMAGE)
-       binding.status.text = status
-        binding.name.text = name
-        binding.imageCharacter.loadImage(binding.imageCharacter.toString())
+       binding.status.text = status.toString()
+        binding.name.text = name.toString()
+        binding.imageCharacter.loadImage(image.toString())
 
 
 
