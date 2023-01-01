@@ -17,7 +17,7 @@ val onClick: (position: Int) -> Unit): RecyclerView.Adapter<CharacterViewHolder.
           val item = CharacterList[adapterPosition]
             binding.txStatus.text = item.characterStatus
             binding.characterName.text = item.characterName
-            binding.ivCharacters.setImageResource(item.characterImage)
+            binding.ivCharacters.loadImage(item.characterImage)
             itemView.setOnClickListener{
                 onClick(adapterPosition)
             }
