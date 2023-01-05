@@ -9,6 +9,7 @@ import com.rahim.kalimaliev_rahim_homework5.databinding.FragmentSecondBinding
 
 class SecondFragment : Fragment() {
 private lateinit var  binding: FragmentSecondBinding
+private lateinit var navArgs: SecondFragmentArgs
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,15 +23,11 @@ private lateinit var  binding: FragmentSecondBinding
         super.onViewCreated(view, savedInstanceState)
 
 
-      val name = arguments?.getString(FirstFragment.USER)
-      val status = arguments?.getString(FirstFragment.STATUS)
-      val image = arguments?.getInt(FirstFragment.IMAGE)
-       binding.status.text = status.toString()
-        binding.name.text = name.toString()
-        binding.imageCharacter.loadImage(image.toString())
-
-
-
+   arguments?.let {
+       navArgs = SecondFragmentArgs.fromBundle(it)
+   }
+ binding.status.text = navArgs.card
+ binding.name.text = navArgs.name
 
 
 
